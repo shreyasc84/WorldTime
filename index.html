@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk World Clock</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen p-4">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-4xl md:text-6xl text-center mb-8 font-bold">WORLD·TIME·SYNC</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="clocksGrid">
+            <!-- Default clocks will be added here -->
+        </div>
+
+        <div class="mt-8 text-center">
+            <button onclick="showAddClockModal()" class="glow-button bg-transparent border-2 border-[#00ff9d] text-[#00ff9d] px-6 py-3 rounded-lg text-lg">
+                <i class="bi bi-plus-lg mr-2"></i>Add New Clock
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div id="clockModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="clock-container p-6 rounded-lg w-96">
+                <h2 class="text-2xl mb-4">Add New Clock</h2>
+                <select id="timezone" class="w-full bg-[#1a2e4c] text-[#00ff9d] p-3 rounded-lg mb-4 border border-[#00ff9d]">
+                    <!-- Timezones will be added here -->
+                </select>
+                <div class="flex justify-end gap-4">
+                    <button onclick="closeModal()" class="glow-button bg-transparent border-2 border-red-500 text-red-500 px-4 py-2 rounded-lg">Cancel</button>
+                    <button onclick="addNewClock()" class="glow-button bg-transparent border-2 border-[#00ff9d] text-[#00ff9d] px-4 py-2 rounded-lg">Add Clock</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+    background: #0a192f;
+    font-family: 'Orbitron', sans-serif;
+    color: #00ff9d;
+}
+.clock-container {
+    background: rgba(16, 24, 39, 0.8);
+    backdrop-filter: blur(10px);
+    border: 2px solid #00ff9d;
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+}
+.time {
+    text-shadow: 0 0 10px #00ff9d;
+}
+.glow-button {
+    transition: all 0.3s ease;
+}
+.glow-button:hover {
+    box-shadow: 0 0 20px #00ff9d;
+    transform: scale(1.05);
+}
